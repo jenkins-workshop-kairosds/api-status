@@ -3,7 +3,7 @@
 @Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.6.1') _
 
 // Initialize global config
-cfg = jplConfig('api-status', 'node', '', [email:''])
+cfg = jplConfig('api-status', 'node', '', [email:'redpandaci+nod@gmail.com'])
 
 pipeline {
     agent none
@@ -38,8 +38,8 @@ pipeline {
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
                 script {
-                    docker.build('<IMAGE-NAME>', '--no-cache .')
-                    jplDockerPush (cfg, "<IMAGE-NAME>", "test", "", "https://registry.hub.docker.com", "<JENKINS_CREDENTIALS>")
+                    docker.build('re3dpandaci/api-status:test', '--no-cache .')
+                    jplDockerPush (cfg, "redpandaci/api-status", "test", "", "https://registry.hub.docker.com", "<JENKINS_CREDENTIALS>")
                 }
             }
         }
@@ -62,7 +62,7 @@ pipeline {
             steps {
                 script {
                     docker.build('redpandaci/api-status:latest')
-                    jplDockerPush (cfg, "<IMAGE-NAME>", "test", "", "https://registry.hub.docker.com", "<JENKINS_CREDENTIALS>")
+                    jplDockerPush (cfg, "redpandaci/api-status", "test", "", "https://registry.hub.docker.com", "<JENKINS_CREDENTIALS>")
                 }
                 sh "bin/deploy.sh update ${env.RANCHER_HOST} ${env.RANCHER_KEY} ${env.RANCHER_SECRET}"
             }
