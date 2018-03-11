@@ -34,21 +34,21 @@ pipeline {
                 }
             }
         }
+        stage('Sonarqube Analysis') {
+            when { expression { (env.BRANCH_NAME == 'develop') || env.BRANCH_NAME.startsWith('PR-') } }
+            agent { label 'docker' }
+            steps {
+                jplSonarScanner(cfg)
+            }
+        }
         stage ('Build') {
             agent { label 'master' }
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
                 script {
                     docker.build('redpandaci/api-status:test', '--no-cache .')
-                    jplDockerPush (cfg, "redpandaci/api-status", "test", "", "https://registry.hub.docker.com", "<JENKINS_CREDENTIALS>")
+                    jplDockerPush (cfg, "redpandaci/api-status", "test", "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                 }
-            }
-        }
-        stage ('Test deploy') {
-            agent { label 'master' }
-            when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
-            steps {
-                sh "bin/deploy.sh update ${env.RANCHER_HOST} ${env.RANCHER_KEY} ${env.RANCHER_SECRET}"
             }
         }
         stage ('Release confirm') {
@@ -57,13 +57,13 @@ pipeline {
                 jplPromoteBuild(cfg)
             }
         }
-        stage ('Production deploy') {
+        stage ('Profduction deploy') {
             agent { label 'master' }
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
                 script {
                     docker.build('redpandaci/api-status:latest')
-                    jplDockerPush (cfg, "redpandaci/api-status", "test", "", "https://registry.hub.docker.com", "<JENKINS_CREDENTIALS>")
+                    jplDockerPush (cfg, "redpandaci/api-status", "test", "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                 }
                 sh "bin/deploy.sh update ${env.RANCHER_HOST} ${env.RANCHER_KEY} ${env.RANCHER_SECRET}"
             }
