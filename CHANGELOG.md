@@ -1,3 +1,13 @@
+<a name="0.3.0"></a>
+# 0.3.0 (2018-03-11)
+
+
+### Build
+
+* Fix typo in stage name ([f91296e0f5cae60ddfabdf201081321c5a2fc8fe](https://github.com/jenkins-workshop-kairosds/api-status/commit/f91296e0f5cae60ddfabdf201081321c5a2fc8fe))
+
+
+
 <a name="0.2.0"></a>
 # 0.2.0 (2018-03-11)
 
@@ -6,6 +16,7 @@
 
 * Fix sonar config ([d4e2caa2364c4d64ceaa075a7ab60ceed5b3731b](https://github.com/jenkins-workshop-kairosds/api-status/commit/d4e2caa2364c4d64ceaa075a7ab60ceed5b3731b))
 * Remove sonar stage ([1715892694b553334a19ba4670ba9ad564e40e34](https://github.com/jenkins-workshop-kairosds/api-status/commit/1715892694b553334a19ba4670ba9ad564e40e34))
+* Update CHANGELOG.md to v0.2.0 with Red Panda JPL ([053c6258f6a12141c23a26273b849d0462f121fd](https://github.com/jenkins-workshop-kairosds/api-status/commit/053c6258f6a12141c23a26273b849d0462f121fd))
 * Update package.json to release 0.2.0 ([9c0627111edcded3475ccf0dcda2584733b1326e](https://github.com/jenkins-workshop-kairosds/api-status/commit/9c0627111edcded3475ccf0dcda2584733b1326e))
 
 ### Update
