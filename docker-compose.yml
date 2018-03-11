@@ -1,0 +1,11 @@
+version: '2'
+services:
+
+  blog-api:
+    image: redpandaci/api-status:latest
+    tty: true
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=production
+      - DEBUG=*

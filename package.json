@@ -4,6 +4,7 @@
   "description": "Yet Another Monitoring Api Status",
   "main": "index.js",
   "dependencies": {
+    "express": "^4.16.2",
     "module-alias": "^2.0.1"
   },
   "devDependencies": {
@@ -24,6 +25,7 @@
     "validate-commit": "^3.2.1"
   },
   "scripts": {
+    "start": "node index.js",
     "changelog":
       "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "commitmsg": "validate-commit-msg -p eslint",
