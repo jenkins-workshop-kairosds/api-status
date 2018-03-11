@@ -1,3 +1,14 @@
+<a name="0.4.0"></a>
+# 0.4.0 (2018-03-11)
+
+
+### Upgrade
+
+* Increase release number ([6aca126aaca367d79c2edb4ad7662d908530d923](https://github.com/jenkins-workshop-kairosds/api-status/commit/6aca126aaca367d79c2edb4ad7662d908530d923))
+* Set release number to v0.4.0 ([2f19088806c556c81bc2bdc2d29eb7d0fe3575eb](https://github.com/jenkins-workshop-kairosds/api-status/commit/2f19088806c556c81bc2bdc2d29eb7d0fe3575eb))
+
+
+
 <a name="0.3.0"></a>
 # 0.3.0 (2018-03-11)
 
@@ -5,6 +16,7 @@
 ### Build
 
 * Fix typo in stage name ([f91296e0f5cae60ddfabdf201081321c5a2fc8fe](https://github.com/jenkins-workshop-kairosds/api-status/commit/f91296e0f5cae60ddfabdf201081321c5a2fc8fe))
+* Update CHANGELOG.md to v0.3.0 with Red Panda JPL ([798218e004fede9c1cbfe9a31f129c817b8c442d](https://github.com/jenkins-workshop-kairosds/api-status/commit/798218e004fede9c1cbfe9a31f129c817b8c442d))
 
 
 
