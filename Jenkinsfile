@@ -63,9 +63,9 @@ pipeline {
             steps {
                 script {
                     docker.build('redpandaci/api-status:latest')
-                    jplDockerPush (cfg, "redpandaci/api-status", "test", "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
+                    jplDockerPush (cfg, "redpandaci/api-status", "latest", "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                 }
-                sh "bin/deploy.sh update ${env.RANCHER_HOST} ${env.RANCHER_KEY} ${env.RANCHER_SECRET}"
+                sh "bin/deploy.sh"
             }
         }
         stage ('Release finish') {
