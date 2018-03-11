@@ -34,13 +34,6 @@ pipeline {
                 }
             }
         }
-        stage('Sonarqube Analysis') {
-            when { expression { (env.BRANCH_NAME == 'develop') || env.BRANCH_NAME.startsWith('PR-') } }
-            agent { label 'docker' }
-            steps {
-                jplSonarScanner(cfg)
-            }
-        }
         stage ('Build') {
             agent { label 'master' }
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
