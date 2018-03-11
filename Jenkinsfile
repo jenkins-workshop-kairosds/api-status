@@ -50,7 +50,7 @@ pipeline {
                 jplPromoteBuild(cfg)
             }
         }
-        stage ('Profduction deploy') {
+        stage ('Production deploy') {
             agent { label 'master' }
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
