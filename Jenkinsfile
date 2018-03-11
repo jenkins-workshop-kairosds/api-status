@@ -38,7 +38,7 @@ pipeline {
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
                 script {
-                    docker.build('re3dpandaci/api-status:test', '--no-cache .')
+                    docker.build('redpandaci/api-status:test', '--no-cache .')
                     jplDockerPush (cfg, "redpandaci/api-status", "test", "", "https://registry.hub.docker.com", "<JENKINS_CREDENTIALS>")
                 }
             }
