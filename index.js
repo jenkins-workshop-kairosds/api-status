@@ -1,5 +1,13 @@
 'use strict'
 
-module.exports = function dummy () {
-  return true
-}
+const version = require('./package.json').version
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send(`api version: ${version}`)
+})
+
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!')
+})

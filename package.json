@@ -4,6 +4,7 @@
   "description": "Yet Another Monitoring Api Status",
   "main": "index.js",
   "dependencies": {
+    "express": "^4.16.2",
     "module-alias": "^2.0.1"
   },
   "devDependencies": {
