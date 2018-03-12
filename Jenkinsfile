@@ -55,10 +55,12 @@ pipeline {
             when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
                 script {
-                    docker.build('redpandaci/api-status:latest')
+                    docker.build('redpandaci/api-status:latest', '--no-cache .')
+                    docker.build("redpandaci/api-status:${cfg.releaseTagNumber}")
                     jplDockerPush (cfg, "redpandaci/api-status", "latest", "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
+                    jplDockerPush (cfg, "redpandaci/api-status", cfg.releaseTagNumber, "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                 }
-                sh "bin/deploy.sh"
+                sh "bin/deploy.sh ${cfg.releaseTagNumber}"
             }
         }
         stage ('Release finish') {

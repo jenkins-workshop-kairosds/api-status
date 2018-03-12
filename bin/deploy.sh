@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-/usr/local/bin/redpanda-rancher update -p api-status -f docker-compose.yml
+TAG=$1
+PORT=$2
+ENVIRONMENT=$3
+
+/usr/local/bin/redpanda-rancher create -p api-status -f docker-compose.yml
