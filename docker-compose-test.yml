@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  blog-api:
+    image: redpandaci/api-status:test
+    tty: true
+    ports:
+      - 2999:3000
+    environment:
+      - NODE_ENV=test
+      - DEBUG=*
