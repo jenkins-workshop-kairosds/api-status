@@ -1,6 +1,20 @@
+<a name="0.10.0"></a>
+# 0.10.0 (2018-03-13)
+
+
+### Upgrade
+
+* Delivery release v0.10.0 ([d252d62963501e4101d2c2dca57ad81575a14041](https://github.com/jenkins-workshop-kairosds/api-status/commit/d252d62963501e4101d2c2dca57ad81575a14041))
+
+
+
 <a name="0.9.0"></a>
 # 0.9.0 (2018-03-13)
 
+
+### Build
+
+* Update CHANGELOG.md to v0.9.0 with Red Panda JPL ([afa7fc5ced540701c2ab2f205bd1923329c4a8fb](https://github.com/jenkins-workshop-kairosds/api-status/commit/afa7fc5ced540701c2ab2f205bd1923329c4a8fb))
 
 ### Upgrade
 
