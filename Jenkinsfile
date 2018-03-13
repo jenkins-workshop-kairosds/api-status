@@ -3,7 +3,7 @@
 @Library('github.com/red-panda-ci/jenkins-pipeline-library@v2.6.1') _
 
 // Initialize global config
-cfg = jplConfig('api-status', 'node', '', [email:'redpandaci+nod@gmail.com'])
+cfg = jplConfig('api-status', 'node', '', [email:'redpandaci+api-status@gmail.com'])
 
 pipeline {
     agent none
@@ -66,7 +66,7 @@ pipeline {
         }
         stage ('Release finish') {
             agent { label 'master' }
-            when { expression { (cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v')) && cfg.promoteBuild.enabled } }
+            when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
             steps {
                 jplCloseRelease(cfg)
             }
