@@ -54,7 +54,7 @@ pipeline {
         }
         stage ('Production deploy') {
             agent { label 'master' }
-            when { expression { cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v') } }
+            when { expression { (cfg.BRANCH_NAME.startsWith('release/v') || cfg.BRANCH_NAME.startsWith('hotfix/v')) && cfg.promoteBuild.enabled } }
             steps {
                 script {
                     docker.build('redpandaci/api-status:latest', '--no-cache .')
