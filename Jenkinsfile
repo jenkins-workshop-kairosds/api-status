@@ -42,6 +42,7 @@ pipeline {
                     docker.build('redpandaci/api-status:test', '--no-cache .')
                     jplDockerPush (cfg, "redpandaci/api-status", "test", "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                     sh "/usr/local/bin/redpanda-rancher create -p api-status-test -f docker-compose-test.yml"
+                    sh "/usr/local/bin/redpanda-rancher update -p api-status-test -f docker-compose-test.yml"
                 }
             }
         }
@@ -62,6 +63,7 @@ pipeline {
                     jplDockerPush (cfg, "redpandaci/api-status", cfg.releaseTagNumber, "", "https://registry.hub.docker.com", "redpandaci-docker-credentials")
                 }
                 sh "/usr/local/bin/redpanda-rancher create -p api-status-production -f docker-compose-production.yml"
+                sh "/usr/local/bin/redpanda-rancher update -p api-status-production -f docker-compose-production.yml"
             }
         }
         stage ('Release finish') {
