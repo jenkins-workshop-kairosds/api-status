@@ -1,3 +1,17 @@
+<a name="0.6.0"></a>
+# 0.6.0 (2018-03-13)
+
+
+### Build
+
+* Add update platform in release ([a75ebbe675d859b2efd359e7c1a1349c96b6ecd1](https://github.com/jenkins-workshop-kairosds/api-status/commit/a75ebbe675d859b2efd359e7c1a1349c96b6ecd1))
+
+### Upgrade
+
+* Delivery release v0.6.0 ([9d296ac11d8ac12f05e19bb439d1a3a35203a00d](https://github.com/jenkins-workshop-kairosds/api-status/commit/9d296ac11d8ac12f05e19bb439d1a3a35203a00d))
+
+
+
 <a name="0.5.0"></a>
 # 0.5.0 (2018-03-12)
 
@@ -8,6 +22,7 @@
 * Fix docker-compose version ([61e9ddf2b271b388b048a1c5d1a4f9ce4b702e91](https://github.com/jenkins-workshop-kairosds/api-status/commit/61e9ddf2b271b388b048a1c5d1a4f9ce4b702e91))
 * Parametrize rancher environment ([634648c397f8a4a962ac3371019dc51a15cd2f71](https://github.com/jenkins-workshop-kairosds/api-status/commit/634648c397f8a4a962ac3371019dc51a15cd2f71))
 * Split docker configuration into test/production ([582fc840cabc4766dd8ef753adf547648e13f37a](https://github.com/jenkins-workshop-kairosds/api-status/commit/582fc840cabc4766dd8ef753adf547648e13f37a))
+* Update CHANGELOG.md to v0.5.0 with Red Panda JPL ([99f855ea6321ca3b00d9ed495beca7a533264d0a](https://github.com/jenkins-workshop-kairosds/api-status/commit/99f855ea6321ca3b00d9ed495beca7a533264d0a))
 
 ### Upgrade
 
