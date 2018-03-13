@@ -1,3 +1,13 @@
+<a name="0.8.0"></a>
+# 0.8.0 (2018-03-13)
+
+
+### Upgrade
+
+* Delivery release v0.8.0 ([280f63546a66f71540929a52c2a2342715a972be](https://github.com/jenkins-workshop-kairosds/api-status/commit/280f63546a66f71540929a52c2a2342715a972be))
+
+
+
 <a name="0.7.0"></a>
 # 0.7.0 (2018-03-13)
 
@@ -5,6 +15,7 @@
 ### Build
 
 * Avoid to execute 'redpanda-rancher create' ([a870381d274f64307f9388fcbbcc5d54202ddb9e](https://github.com/jenkins-workshop-kairosds/api-status/commit/a870381d274f64307f9388fcbbcc5d54202ddb9e))
+* Update CHANGELOG.md to v0.7.0 with Red Panda JPL ([263b92eaae9168d68db4cf111d4236635d0af4c9](https://github.com/jenkins-workshop-kairosds/api-status/commit/263b92eaae9168d68db4cf111d4236635d0af4c9))
 
 ### Upgrade
 
