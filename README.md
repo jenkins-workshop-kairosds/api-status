@@ -1,8 +1,9 @@
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-
 # api-status
 
 _Yet Another Monitoring Api Status_
+
+[![Build Status](https://jenkins.redpandaci.com/buildStatus/icon?job=jenkins-workshop-kairosds/api-status/develop)](https://jenkins.redpandaci.com/job/jenkins-workshop-kairosds/job/api-status/job/develop/) [![Dependency Status][daviddm-image]][daviddm-url]
+
 
 ## Getting Started
 

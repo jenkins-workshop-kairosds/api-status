@@ -1,6 +1,20 @@
+<a name="1.1.0"></a>
+# 1.1.0 (2018-03-15)
+
+
+### Docs
+
+* Update badgets in README file ([9221b2dbc9cb2938f3e36da6fc617e97a5dd0abd](https://github.com/jenkins-workshop-kairosds/api-status/commit/9221b2dbc9cb2938f3e36da6fc617e97a5dd0abd))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2018-03-15)
 
+
+### Build
+
+* Update CHANGELOG.md to v1.0.0 with Red Panda JPL ([eb76d9c157548756888d8582287539f5559b805c](https://github.com/jenkins-workshop-kairosds/api-status/commit/eb76d9c157548756888d8582287539f5559b805c))
 
 ### Upgrade
 
