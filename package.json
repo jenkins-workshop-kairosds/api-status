@@ -4,7 +4,7 @@
   "description": "Yet Another Monitoring Api Status",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "module-alias": "^2.2.0"
   },
   "devDependencies": {
@@ -14,7 +14,7 @@
     "eslint-config-prettier": "^2.10.0",
     "eslint-config-xo": "^0.18.2",
     "eslint-plugin-prettier": "^2.7.0",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "husky": "^0.14.3",
     "lint-staged": "^9.0.2",
     "mocha": "^4.0.1",
